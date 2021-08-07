@@ -1,9 +1,6 @@
 @charset "utf-8";
 
 /*
-/*	Copyright (c) 2021 Marketify
-/*	Author: Marketify
-/*	This file is made for CURRENT TEMPLATE
 
 01)	TOKYO TOKYO BASE
 02) TOKYO MOBILE MENU
@@ -767,13 +764,15 @@ h6 { font-size: 16px; }
 	width: 50%;
 	padding-left: 50px;
 }
-.tokyo_tm_modalbox_about .counter{
+.tokyo_tm_modalbox_about .counter,
+.tokyo_tm_modalbox_about .timeline {
 	width: 100%;
 	float: left;
 	clear: both;
 }
-.tokyo_tm_modalbox_about .counter ul{
-	margin: 0px 0px 42px -50px;
+.tokyo_tm_modalbox_about .counter ul,
+.tokyo_tm_modalbox_about .timeline ul {
+	margin: 0px 0px 0 -50px;
 	list-style-type: none;
 	padding-top: 45px;
 	display: flex;
@@ -785,6 +784,22 @@ h6 { font-size: 16px; }
 	float: left;
 	padding-left: 50px;
 } 
+
+.tokyo_tm_modalbox_about .timeline ul li {
+	margin: 0px 0px 20px 0px;
+	width: 100%;
+	float: left;
+	padding-left: 50px;
+}
+.tokyo_tm_modalbox_about .timeline ul li:last-child {
+	margin-bottom: 0;
+}
+
+.tokyo_tm_modalbox_about .timeline .list_inner {
+	text-align: left;
+	padding: 40px 30px;
+}
+
 .tokyo_tm_modalbox_about .list_inner{
 	width: 100%;
 	height: 100%;
@@ -795,14 +810,22 @@ h6 { font-size: 16px; }
 	text-align: center;
 	padding: 40px 20px;
 }
-.tokyo_tm_modalbox_about .counter ul li h3{
+.tokyo_tm_modalbox_about .counter ul li h3,
+.tokyo_tm_modalbox_about .timeline ul li h3{
 	font-weight: 600;
 	font-size: 20px;
 	margin-bottom: 3px;
 }
-.tokyo_tm_modalbox_about .counter ul li .name{
+.tokyo_tm_modalbox_about .counter ul li .name,
+.tokyo_tm_modalbox_about .timeline ul li .name{
 	font-style: italic;
 }
+
+.tokyo_tm_modalbox_about .timeline ul li .name {
+	float:  left;
+	line-height: 1.5;
+}
+
 .tokyo_tm_modalbox_about .partners{
 	width: 100%;
 	height: auto;

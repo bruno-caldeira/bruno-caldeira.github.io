@@ -236,8 +236,10 @@ function tokyo_tm_my_progress(){
 	}
 	jQuery('.tokyo_progress').each(function() {
 		var pWrap 			= jQuery(this);
-		pWrap.waypoint({handler: function(){tdProgress(pWrap);},offset:'90%'});	
+		pWrap.waypoint({handler: function(){tdProgress(pWrap);},offset:'200%'});	
+
 	});
+
 }
 
 // -----------------------------------------------------
@@ -288,7 +290,7 @@ function tokyo_tm_mycounter(){
 						},	
 					});
 				}
-			},offset:'95%'	
+			},offset:'200%'	
 		});
 	});
 }
