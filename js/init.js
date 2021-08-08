@@ -380,7 +380,7 @@ function tokyo_tm_popup(){
 			delegate: 'a.zoom', // the selector for gallery item
 			type: 'image',
 			gallery: {
-			  enabled:true
+			  enabled:false
 			},
 			removalDelay: 300,
 			mainClass: 'mfp-fade'
