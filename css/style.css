@@ -1202,6 +1202,11 @@ h2.logo a{
 	opacity: 0;
 	min-width: 100%;
 }
+.tokyo_tm_modalbox .additional_images ul li .my_image .fullheight{
+	opacity: 1;
+	min-width: 100%;
+}
+
 .tokyo_tm_modalbox .additional_images ul li .my_image .main{
 	position: absolute;
 	top: 0px;
