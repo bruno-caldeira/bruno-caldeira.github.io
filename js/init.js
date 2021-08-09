@@ -12,11 +12,11 @@ jQuery(document).ready(function(){
 	// here all ready functions
 	
 	tokyo_tm_menu();
-	tokyo_tm_modalbox_news();
+	// tokyo_tm_modalbox_news();
 	tokyo_tm_modalbox_about();
 	tokyo_tm_modalbox_portfolio();
 	tokyo_tm_my_progress();
-	tokyo_tm_mycounter();
+	// tokyo_tm_mycounter();
 	tokyo_tm_projects();
 	tokyo_tm_portfolio();
 	tokyo_tm_cursor();
@@ -64,41 +64,41 @@ function tokyo_tm_menu(){
 // -------------  MODALBOX NEWS  -------------------
 // -------------------------------------------------
 
-function tokyo_tm_modalbox_news(){
+// function tokyo_tm_modalbox_news(){
 	
-	"use strict";
+// 	"use strict";
 	
-	var modalBox	= jQuery('.tokyo_tm_modalbox');
-	var list 		= jQuery('.tokyo_tm_news ul li');
-	var closePopup	= modalBox.find('.close');
+// 	var modalBox	= jQuery('.tokyo_tm_modalbox');
+// 	var list 		= jQuery('.tokyo_tm_news ul li');
+// 	var closePopup	= modalBox.find('.close');
 	
-	list.each(function(){
-		var element 	= jQuery(this);
-		var details 	= element.find('.list_inner').html();
-		var buttons 	= element.find('.details .title a,.tokyo_tm_full_link,.tokyo_tm_read_more a');
-		var mainImage	= element.find('.main');
-		var imgData		= mainImage.data('img-url');
-		var title		= element.find('.title');
-		var titleHref	= element.find('.title a').html();
-		buttons.on('click',function(){
-			jQuery('body').addClass('modal');
-			modalBox.addClass('opened');
-			modalBox.find('.description_wrap').html(details);
-			mainImage = modalBox.find('.main');
-			mainImage.css({backgroundImage: 'url('+imgData+')'});
-			title = modalBox.find('.title');
-			title.html(titleHref);
-			tokyo_tm_imgtosvg();
-			return false;
-		});
-	});
-	closePopup.on('click',function(){
-		modalBox.removeClass('opened');
-		modalBox.find('.description_wrap').html('');
-		jQuery('body').removeClass('modal');
-		return false;
-	});
-}
+// 	list.each(function(){
+// 		var element 	= jQuery(this);
+// 		var details 	= element.find('.list_inner').html();
+// 		var buttons 	= element.find('.details .title a,.tokyo_tm_full_link,.tokyo_tm_read_more a');
+// 		var mainImage	= element.find('.main');
+// 		var imgData		= mainImage.data('img-url');
+// 		var title		= element.find('.title');
+// 		var titleHref	= element.find('.title a').html();
+// 		buttons.on('click',function(){
+// 			jQuery('body').addClass('modal');
+// 			modalBox.addClass('opened');
+// 			modalBox.find('.description_wrap').html(details);
+// 			mainImage = modalBox.find('.main');
+// 			mainImage.css({backgroundImage: 'url('+imgData+')'});
+// 			title = modalBox.find('.title');
+// 			title.html(titleHref);
+// 			tokyo_tm_imgtosvg();
+// 			return false;
+// 		});
+// 	});
+// 	closePopup.on('click',function(){
+// 		modalBox.removeClass('opened');
+// 		modalBox.find('.description_wrap').html('');
+// 		jQuery('body').removeClass('modal');
+// 		return false;
+// 	});
+// }
 
 // -------------------------------------------------
 // -------------  MODALBOX ABOUT  ------------------
@@ -115,7 +115,7 @@ function tokyo_tm_modalbox_about(){
 	opener.on('click',function(){
 		modalBox.addClass('opened');
 		tokyo_tm_my_progress();
-		tokyo_tm_mycounter();
+		// tokyo_tm_mycounter();
 		return false;
 	});
 	closer.on('click',function(){

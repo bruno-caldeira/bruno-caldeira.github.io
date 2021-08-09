@@ -247,6 +247,11 @@ h6 { font-size: 16px; }
 .tokyo_tm_mobile_menu .logo img{
 	max-width: 100px;
 }
+
+.tokyo_tm_mobile_menu h2.logo {
+	font-size: 30px;
+}
+
 .tokyo_tm_mobile_menu .menu ul{
 	margin: 0px;
 	list-style-type: none;
@@ -263,8 +268,8 @@ h6 { font-size: 16px; }
 	color: #000;
 }
 .tokyo_tm_mobile_menu .menu ul li .svg{
-	width: 16px;
-	height: 16px;
+	width: 20px;
+	height: 20px;
 }
 
 /*---------------------------------------------------*/
@@ -287,6 +292,14 @@ h6 { font-size: 16px; }
 }
 .tokyo_tm_all_wrap .leftpart img{
 	max-width: 150px;
+}
+h2.logo {
+	font-weight: 800;
+	letter-spacing: 2px;
+}
+h2.logo a{
+	text-decoration: none;
+	color: inherit;
 }
 .tokyo_tm_all_wrap .leftpart .menu{
 	padding: 40px 0px 50px 0px;
@@ -850,6 +863,7 @@ h6 { font-size: 16px; }
 .tokyo_tm_modalbox_about .timeline ul li .name {
 	float:  left;
 	line-height: 1.5;
+	width:  100%;
 }
 
 .tokyo_tm_modalbox_about .partners{
