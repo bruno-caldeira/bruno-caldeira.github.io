@@ -10,8 +10,8 @@ jQuery(document).ready(function(){
 	"use strict";
 	
 	// here all ready functions
-	
 	tokyo_tm_menu();
+	tokyo_tm_CompareSlider();
 	tokyo_tm_modalbox_news();
 	tokyo_tm_modalbox_about();
 	tokyo_tm_modalbox_portfolio();
@@ -30,7 +30,34 @@ jQuery(document).ready(function(){
 		tokyo_tm_my_load();
 	});
 	
+	sliderEach("#compare-ds-filter","#click-ds-filter", 17);
+
+
 });
+
+
+
+// -------------------------------------------------
+// -------------  COMPARE IMAGES  -------------------
+// -------------------------------------------------
+
+function sliderEach(id, clickID,start){
+	var divClone = jQuery(id).clone(true).off();
+
+	jQuery(clickID).click(function(){
+	 	setTimeout(function(){
+			jQuery(id).BeerSlider({start: start});
+			}, 1000);
+
+	 	jQuery(id).replaceWith(divClone.clone()); // Restore element with a copy of divClone
+
+	 	jQuery(id).replaceWith(divClone); // Restore element with divClone itself
+	 	
+	});
+
+}
+	
+
 
 // -----------------------------------------------------
 // ---------------   FUNCTIONS    ----------------------
@@ -236,7 +263,7 @@ function tokyo_tm_my_progress(){
 	}
 	jQuery('.tokyo_progress').each(function() {
 		var pWrap 			= jQuery(this);
-		pWrap.waypoint({handler: function(){tdProgress(pWrap);},offset:'200%'});	
+		pWrap.waypoint({handler: function(){tdProgress(pWrap);},offset:'1000%'});	
 
 	});
 
@@ -290,7 +317,7 @@ function tokyo_tm_mycounter(){
 						},	
 					});
 				}
-			},offset:'200%'	
+			},offset:'1000%'	
 		});
 	});
 }
@@ -508,3 +535,19 @@ function tokyo_tm_owl_carousel(){
 	});
 	tokyo_tm_imgtosvg();
 }
+
+
+// jQuery('.tokyo_tm_modalbox').on('shown.bs.modal', function (e) {
+//   	alert("ahahahah")
+// })
+
+
+function tokyo_tm_CompareSlider(){ 
+    jQuery.fn.BeerSlider = function ( options ) {
+        options = options || {};
+        return this.each(function() {
+          new BeerSlider(this, options);
+        });
+      };
+}
+
