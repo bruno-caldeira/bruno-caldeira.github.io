@@ -31,6 +31,7 @@ jQuery(document).ready(function(){
 	});
 	
 	sliderEach("#compare-ds-filter","#click-ds-filter", 17);
+	sliderEach("#compare-ds-menu","#click-ds-menu", 50);
 
 
 });
@@ -41,12 +42,12 @@ jQuery(document).ready(function(){
 // -------------  COMPARE IMAGES  -------------------
 // -------------------------------------------------
 
-function sliderEach(id, clickID,start){
+function sliderEach(id, clickID,startNumber){
 	var divClone = jQuery(id).clone(true).off();
 
 	jQuery(clickID).click(function(){
 	 	setTimeout(function(){
-			jQuery(id).BeerSlider({start: start});
+			jQuery(id).BeerSlider({start: startNumber});
 			}, 1000);
 
 	 	jQuery(id).replaceWith(divClone.clone()); // Restore element with a copy of divClone
@@ -54,7 +55,6 @@ function sliderEach(id, clickID,start){
 	 	jQuery(id).replaceWith(divClone); // Restore element with divClone itself
 	 	
 	});
-
 }
 	
 
@@ -125,6 +125,24 @@ function tokyo_tm_modalbox_news(){
 		jQuery('body').removeClass('modal');
 		return false;
 	});
+	//Close when hit escape
+	jQuery(document).keydown(function(event) { 
+		if (event.keyCode == 27) { 
+			modalBox.removeClass('opened');
+			modalBox.find('.description_wrap').html('');
+			jQuery('body').removeClass('modal');
+			return false;
+		}
+	});
+	//Close when click outside
+	jQuery(document).mouseup(function (e) {
+	    if (jQuery(e.target).closest(".box_inner").length === 0) {
+	        modalBox.removeClass('opened');
+	        modalBox.find('.description_wrap').html('');
+	        jQuery('body').removeClass('modal');
+	        return false;
+	    }
+	});
 }
 
 // -------------------------------------------------
@@ -148,6 +166,21 @@ function tokyo_tm_modalbox_about(){
 	closer.on('click',function(){
 		modalBox.removeClass('opened');
 		return false;
+	});
+	
+	//Close when hit escape
+	jQuery(document).keydown(function(event) { 
+		if (event.keyCode == 27) { 
+			modalBox.removeClass('opened');
+			return false;
+		}
+	});
+	//Close when click outside
+	jQuery(document).mouseup(function (e) {
+	    if (jQuery(e.target).closest(".box_inner").length === 0) {
+	       modalBox.removeClass('opened');
+	       return false;
+	    }
 	});
 }
 
