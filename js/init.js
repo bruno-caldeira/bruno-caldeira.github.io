@@ -19,7 +19,7 @@ jQuery(document).ready(function(){
 	// tokyo_tm_mycounter();
 	tokyo_tm_projects();
 	tokyo_tm_portfolio();
-	tokyo_tm_cursor();
+	// tokyo_tm_cursor();
 	tokyo_tm_imgtosvg();
 	tokyo_tm_popup();
 	tokyo_tm_data_images();
