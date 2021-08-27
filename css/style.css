@@ -1769,6 +1769,24 @@ body.modal{
 	float: left;
 	padding: 100px 0px 100px 0px;
 }
+.tokyo_tm_contact .tokyo_tm_button {
+	float: none;
+}
+.tokyo_tm_contact a{
+	text-decoration: none;
+	color: #787878;
+	font-weight:  bold;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+.tokyo_tm_contact a:hover{
+	color: #000;
+	letter-spacing: 2px;
+}
+
 .tokyo_tm_contact .map_wrap{
 	width: 100%;
 	height: auto;
