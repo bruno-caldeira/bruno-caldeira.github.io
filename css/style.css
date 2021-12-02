@@ -1174,7 +1174,7 @@ h2.logo a{
 	text-decoration: none;
 	color: #000;
 }
-.tokyo_tm_modalbox h3.center {
+.tokyo_tm_modalbox .center {
 	text-align: center;
 	margin-bottom: 10px;
 }
@@ -1211,6 +1211,10 @@ h2.logo a{
 	opacity: 0;
 	min-width: 100%;
 }
+.tokyo_tm_modalbox .additional_images ul li .multiple-images img{
+	margin-bottom:  10px;
+}
+
 .tokyo_tm_modalbox .additional_images ul li .my_image .fullheight{
 	opacity: 1;
 	min-width: 100%;
