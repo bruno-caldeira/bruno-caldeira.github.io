@@ -10,6 +10,7 @@ jQuery(document).ready(function(){
 	"use strict";
 	
 	// here all ready functions
+	// passWord();
 	tokyo_tm_menu();
 	tokyo_tm_CompareSlider();
 	tokyo_tm_modalbox_news();
@@ -194,7 +195,37 @@ function tokyo_tm_modalbox_portfolio(){
 	
 	var modalBox	= jQuery('.tokyo_tm_modalbox');
 	var button		= jQuery('.tokyo_tm_portfolio .popup_info');
+	var button_password = jQuery('.tokyo_tm_portfolio .popup_info_password');
 	
+	button_password.on('click',function(){
+		var element 	= jQuery(this);
+		var parent		= element.closest('li');
+		var details 	= parent.find('.details_all_wrap').html();
+		var title 		= parent.find('.entry').data('title');
+		var category 	= parent.find('.entry').data('category');
+
+		var testV = 1;
+		var pss1 = prompt('This is a password protected area, please type the password provided:','');
+		while (testV < 3) {
+			if (!pss1)
+			history.go(-1);
+			if (pss1.toLowerCase() == "301188") {
+				modalBox.addClass('opened');
+				modalBox.find('.description_wrap').html(details);
+				modalBox.find('.top_image').html(parent.find('.popup_info_password').html());
+				modalBox.find('.portfolio_main_title').html('<h3>'+title+'</h3>'+'<span>'+category+'</span>');
+				tokyo_tm_popup();
+				break;
+			}
+			testV+=1;
+			var pss1 = prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
+		}
+		if (pss1.toLowerCase()!="password" & testV ==3)
+			history.go(-1);
+			return "";
+	});
+
+
 	button.on('click',function(){
 		var element 	= jQuery(this);
 		var parent		= element.closest('li');
@@ -583,4 +614,26 @@ function tokyo_tm_CompareSlider(){
         });
       };
 }
+
+
+
+// function passWord(){ {
+// 	var testV = 1;
+// 	var pass1 = prompt('Please Enter Your Password',' ');
+// 	while (testV < 3) {
+// 	if (!pass1)
+// 	history.go(-1);
+// 	if (pass1.toLowerCase() == "letmein") {
+// 	alert('You Got it Right!');
+// 	window.open('protectpage.html');
+// 	break;
+// 	}
+// 	testV+=1;
+// 	var pass1 =
+// 	prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
+// 	}
+// 	if (pass1.toLowerCase()!="password" & testV ==3)
+// 	history.go(-1);
+// 	return " ";
+// }
 
