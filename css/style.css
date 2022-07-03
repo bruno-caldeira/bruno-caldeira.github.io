@@ -562,10 +562,12 @@ h2.logo a{
 .tokyo_tm_about .description .right{
 	width: 45%;
 	padding-left: 50px;
+
 }
 .tokyo_tm_about .description .right > ul{
 	margin: 0px;
 	list-style-type: none;
+	display: inline-block;
 }
 .tokyo_tm_about .description .right > ul > li{
 	margin: 0px;
