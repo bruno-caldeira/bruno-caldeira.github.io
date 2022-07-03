@@ -632,7 +632,8 @@ h2.logo a{
 	letter-spacing: 2px;
 }
 
-.tokyo_tm_button a{
+.tokyo_tm_button a,
+.tokyo_tm_button-off a{
 	text-decoration: none;
 	color: #fff;
 	display: inline-block;
